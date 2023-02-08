@@ -51,7 +51,7 @@ main {
     height: 487px;
     padding: 2em; 
     width: 915px;
-    border-radius: 20px;
+    border-radius: 30px;
     transform: translateY(-10px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -236,5 +236,18 @@ input::-webkit-inner-spin-button {
     } 
     .tip-selection {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    body {
+        background: var(--Light-grayish-cyan);
+    }
+
+    .logo {
+        transform: translateY(-10px);
+        padding: 3em;
+    }
+
+    main {
+        width: 100%;
     }
 }
