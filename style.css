@@ -130,13 +130,13 @@ input::placeholder {
     background-color: var(--Very-dark-cyan);
     color: var(--White);
     border: none;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.3em;
     font-size: 1.5em;
     border-radius: 5px;
     font-weight: 500;
     font-family: 'Space Mono', monospace;
     cursor: pointer;
-    height: 47px;
+    height: 48px;
 }
 
 .tip-selection button:hover {
@@ -227,6 +227,10 @@ input::placeholder {
     color: var(--Very-dark-cyan);
 }
 
+label {
+    display: inline-block;
+}
+
 /* responsive styles */
 @media screen and (max-width: 900px) {
     .container {
@@ -262,4 +266,5 @@ input::placeholder {
         font-size: 2em;
         padding: 0.5em;
     }
+
 }
