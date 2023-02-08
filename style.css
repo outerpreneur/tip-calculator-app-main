@@ -250,4 +250,10 @@ input::-webkit-inner-spin-button {
     main {
         width: 100%;
     }
+    form {
+        gap: 2em;
+    }
+    .output {
+        gap: 2em;
+    }
 }
