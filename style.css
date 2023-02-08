@@ -98,7 +98,8 @@ input {
     font-size: 1.4em;
     font-family: 'Space Mono', monospace;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan);
 }
 
 
@@ -108,7 +109,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.bill-input input::placeholder, .people-input input::placeholder  {
+input::placeholder {
     color: var(--Grayish-cyan);
     font-weight: 600;
     font-size: 1.1em;
@@ -255,5 +256,9 @@ input::-webkit-inner-spin-button {
     }
     .output {
         gap: 2em;
+    }
+
+    .output-total span {
+        font-size: 2em;
     }
 }
