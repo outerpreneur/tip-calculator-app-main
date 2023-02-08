@@ -152,7 +152,7 @@ input::placeholder {
     text-align: center;
     width: 100%;
     font-weight: 600;
-    color: var(--Very-dark-cyan)
+    color: var(--Dark-grayish-cyan);
 }
 
 .custom-tip::placeholder {
