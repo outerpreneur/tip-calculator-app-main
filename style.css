@@ -109,7 +109,9 @@ input::-webkit-inner-spin-button {
 }
 
 .bill-input input::placeholder, .people-input input::placeholder  {
-    color: var(--Light-grayish-cyan);
+    color: var(--Grayish-cyan);
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 .input input:focus {
@@ -222,4 +224,17 @@ input::-webkit-inner-spin-button {
 .output button:hover {
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
+}
+
+/* responsive styles */
+@media screen and (max-width: 900px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        height: 100%;
+        padding: 1.5em;
+    } 
+    .tip-selection {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
