@@ -1,0 +1,225 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* colors  */
+
+:root{
+--Strong-cyan: hsl(172, 67%, 45%);
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--green: hsl(184,82%,24%);
+}
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* structure */
+
+body {
+    font-family: 'Space Mono', monospace;
+    background: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(185, 41%, 84%), hsl(185, 41%, 84%), hsl(185, 41%, 84%));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex-direction: column;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.logo {
+    transform: translateY(-92px);
+}
+
+.container {
+    background-color: var(--White);
+    height: 487px;
+    padding: 2em; 
+    width: 915px;
+    border-radius: 20px;
+    transform: translateY(-10px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.3em;
+}
+
+.input {
+    padding: 0.9em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.input label, .input div p {
+    color: var(--Grayish-cyan);
+    margin-bottom: 0.9em;
+    font-weight: 600;
+}
+
+input {
+    cursor: pointer;
+}
+
+.bill-input {
+    position: relative;
+}
+
+.bill-input img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.bill-input input, .people-input input {
+    width: 100%;
+    padding: 0.4em;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: right;
+    font-size: 1.4em;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill-input input::placeholder, .people-input input::placeholder  {
+    color: var(--Light-grayish-cyan);
+}
+
+.input input:focus {
+    color: var(--Very-dark-cyan);
+    outline: 1px solid var(--Strong-cyan);
+}
+
+.tip-selection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+
+.tip-selection button {
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    padding: 0.3em 0.5em;
+    font-size: 1.5em;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    height: 47px;
+}
+
+.tip-selection button:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.custom-tip {
+    background-color: var(--Very-light-grayish-cyan) ;
+    height: 47px;
+    border: none;
+    font-size: 1.4em;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    color: var(--Very-dark-cyan)
+}
+
+.custom-tip::placeholder {
+    color: var(--Grayish-cyan);
+}
+
+.custom-tip:focus {
+    outline: var(--Strong-cyan);
+}
+
+
+.people-input {
+    position: relative;
+}
+
+.people-input img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.output {
+    padding: 2.5em 2.5em;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.output-total {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8em
+}
+
+.output-total div {
+    padding: 1em 0;
+}
+
+.output-total h2 {
+    color: var(--Light-grayish-cyan);
+    font-size: 15px;
+}
+
+
+.output-total h3 {
+    color: var(--Grayish-cyan);
+    font-size: 12px;
+}
+
+.output-total span {
+    font-size: 3em;
+    color: var(--Strong-cyan);
+    text-align: right;
+    font-weight: 600;
+}
+
+.output button {
+    width: 100%;
+    padding: 1em;
+    background-color: var(--green);
+    border: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+
+.output button:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
