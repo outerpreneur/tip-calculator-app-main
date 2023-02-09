@@ -90,7 +90,7 @@ input {
 }
 
 .input-1 label, .input-3 label {
-    margin-bottom: 0em;
+    margin-bottom: 0.7em;
 }
 
 .bill-input input, .people-input input {
