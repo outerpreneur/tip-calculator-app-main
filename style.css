@@ -85,13 +85,13 @@ input {
 
 .bill-input img {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 16px;
+    left: 16px;
 }
 
 .bill-input input, .people-input input {
     width: 100%;
-    padding: 0.4em;
+    padding: 0.3em;
     border: none;
     background-color: var(--Very-light-grayish-cyan);
     text-align: right;
@@ -170,8 +170,8 @@ input::placeholder {
 
 .people-input img {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 16px;
+    left: 16px;
 }
 
 .output {
@@ -230,6 +230,27 @@ input::placeholder {
 label {
     display: inline-block;
 }
+
+/* errors */
+
+.error-message {
+    color: red ;
+    border: 1px solid red;
+    outline: red ;
+}
+
+.error-message::before {
+    content: "Cant't be zero";
+    color: red;
+    margin-top: .2rem;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-2.9em);
+}
+
 
 /* responsive styles */
 @media screen and (max-width: 900px) {

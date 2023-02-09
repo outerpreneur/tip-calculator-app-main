@@ -22,7 +22,7 @@
           <div class="input-1">
             <label for="bill">Bill</label>
             <div class="bill-input">
-              <input type="text" placeholder="0" id="bill" />
+              <input type="number" placeholder="0" id="bill" />
               <img src="./images/icon-dollar.svg" alt="person" />
             </div>
           </div>
@@ -30,11 +30,11 @@
           <div class="input-2">
             <p>Select Tip %</p>
             <div class="tip-selection">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
+              <button id="5percent">5%</button>
+              <button id="10percent">10%</button>
+              <button id="15percent">15%</button>
+              <button id="25percent">25%</button>
+              <button id="50percent">50%</button>
               <input class="custom-tip" placeholder="Custom">
             </div>
           </div>
@@ -42,7 +42,7 @@
           <div class="input-3">
             <label for="people">Number of People</label>
             <div class="people-input">
-              <input type="text" placeholder="0" id="people" />
+              <input type="number" min="1" max="10" placeholder="0" value="1" id="people" />
               <img src="./images/icon-person.svg" alt="person" />
             </div>
           </div>
@@ -54,17 +54,18 @@
             <h2>Tip Amount</h2>
             <h3>/ person</h3>
           </div>
-          <span>$0.00</span>
+          <span id="tip-amount">$0.00</span>
           <div>
             <h2>Total</h2>
             <h3>/ person</h3>
           </div>
-          <span>$0.00</span>
+          <span id="bill-total">$0.00</span>
         </div>
         <button>Reset</button>
       </section>
     </section>
   </main>
+  <script src="app.js"></script>
 </body>
 
 </html>
