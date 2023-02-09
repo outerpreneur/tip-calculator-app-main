@@ -43,12 +43,12 @@ main {
 }
 
 .logo {
-    transform: translateY(-92px);
+    transform: translateY(-100px);
 }
 
 .container {
     background-color: var(--White);
-    height: 487px;
+    height: 480px;
     padding: 2em; 
     width: 915px;
     border-radius: 30px;
@@ -87,6 +87,10 @@ input {
     position: absolute;
     top: 16px;
     left: 16px;
+}
+
+.input-1 label, .input-3 label {
+    margin-bottom: 0em;
 }
 
 .bill-input input, .people-input input {
@@ -186,7 +190,7 @@ input::placeholder {
 .output-total {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.8em
+    gap: 1.2em
 }
 
 .output-total div {
