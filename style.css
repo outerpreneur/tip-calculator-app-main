@@ -140,7 +140,7 @@ input::placeholder {
 }
 
 .tip-selection button:hover {
-    background-color: var(--Strong-cyan);
+    background-color: var(--Light-grayish-cyan);
     color: var(--Very-dark-cyan);
 }
 
