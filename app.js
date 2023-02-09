@@ -86,11 +86,3 @@ resetBtn.addEventListener('click', () => {
     billInputTag.value = 0
     numberOfPeople.value = 0
 })
-
-
-
-// function calculateTip(billInputTag, tipPercentage, numberOfPeople) {
-//     let tipAmount = (billInputTag * (tipPercentage / 100)) / numberOfPeople;
-//     // let tip = Math.floor(tipAmount * 100) / 100;
-//     // tip = tip.toFixed(2);
-// }
