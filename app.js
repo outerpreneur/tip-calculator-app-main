@@ -29,9 +29,10 @@ function customTipInput() {
     const numberOfPeopleValue = numberOfPeople.value
     let tipValue = customTip.value
     tipValueFormat = parseFloat(tipValue)
-    tipAmount.innerHTML = "$" + (tipValueFormat / numberOfPeopleValue).toFixed(2)
+    tipSplitedNumberPeople = tipValueFormat / numberOfPeopleValue
+    tipAmount.innerHTML = "$" + tipSplitedNumberPeople.toFixed(2)
     const billToBeSplitted = formatBillTotalValue / numberOfPeopleValue
-    const billToBesplittedWithTip = parseFloat(billToBeSplitted) + parseFloat(numberOfPeopleValue)
+    const billToBesplittedWithTip = parseFloat(billToBeSplitted) + parseFloat(tipSplitedNumberPeople)
     billTotal.innerHTML = "$" + billToBesplittedWithTip.toFixed(2)
 };
 
