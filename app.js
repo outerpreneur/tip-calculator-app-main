@@ -27,15 +27,12 @@ function customTipInput() {
     const billTotalValue = billInputTag.value
     const formatBillTotalValue = parseFloat(billTotalValue).toLocaleString('en-US')
     const numberOfPeopleValue = numberOfPeople.value
-    let tipValue = customTip.innerText
-    tipValue = tipValue.substr(0, tipValue.length -1)
+    let tipValue = customTip.value
     tipValueFormat = parseFloat(tipValue)
-    SelectedTipValueForBill = formatBillTotalValue * (tipValueFormat / 100)
-    BillPlusTotalTip= parseFloat(billTotalValue) + parseFloat(SelectedTipValueForBill)
-    BillPlusTotalTipPP = BillPlusTotalTip / numberOfPeopleValue
-    billTotal.innerHTML = "$" + parseFloat(BillPlusTotalTipPP).toFixed(2)
-    TotalTipPP = SelectedTipValueForBill / numberOfPeopleValue
-    tipAmount.innerHTML = "$" + parseFloat(TotalTipPP).toFixed(2)
+    tipAmount.innerHTML = "$" + (tipValueFormat / numberOfPeopleValue).toFixed(2)
+    const billToBeSplitted = formatBillTotalValue / numberOfPeopleValue
+    const billToBesplittedWithTip = parseFloat(billToBeSplitted) + parseFloat(numberOfPeopleValue)
+    billTotal.innerHTML = "$" + billToBesplittedWithTip.toFixed(2)
 };
 
 
