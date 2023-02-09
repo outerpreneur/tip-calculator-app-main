@@ -17,24 +17,18 @@ const tipAmount = document.querySelector("#tip-amount")
 const billTotal = document.querySelector("#bill-total")
 
 
-// values
+// reset
 
-
+const resetBtn = document.querySelector(".reset")
 
 
 // // functions
-
-// function calculateTip(billInputTag, tipPercentage, numberOfPeople) {
-//     let tipAmount = (billInputTag * (tipPercentage / 100)) / numberOfPeople;
-//     // let tip = Math.floor(tipAmount * 100) / 100;
-//     // tip = tip.toFixed(2);
-// }
 
 
 
 // // triggers
 
-// calculate tip when click on tip percentage button
+
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         e.preventDefault()
@@ -53,13 +47,6 @@ buttons.forEach((button) => {
     })
 })
 
-// // 
-// billInputTag.addEventListener('keyup', () =>{
-//     const billTotalValue = billInputTag.value
-//     const formatBillTotalValue = parseFloat(billTotalValue).toLocaleString('en-US')
-//     billTotal.innerHTML = "$" + formatBillTotalValue
-// })
-
 
 numberOfPeople.addEventListener('keyup', () => {
     const numberOfPeopleValue = numberOfPeople.value
@@ -74,3 +61,19 @@ numberOfPeople.addEventListener('keyup', () => {
         numberOfPeople.parentElement.classList.remove("error-message")
     }
 })
+
+
+resetBtn.addEventListener('click', () => {
+    tipAmount.innerHTML = "$0.00"
+    billTotal.innerHTML = '$0.00'
+    billInputTag.value = 0
+    numberOfPeople.value = 1
+})
+
+
+
+// function calculateTip(billInputTag, tipPercentage, numberOfPeople) {
+//     let tipAmount = (billInputTag * (tipPercentage / 100)) / numberOfPeople;
+//     // let tip = Math.floor(tipAmount * 100) / 100;
+//     // tip = tip.toFixed(2);
+// }
