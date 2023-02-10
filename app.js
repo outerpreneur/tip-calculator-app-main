@@ -41,6 +41,7 @@ function customTipInput() {
 // // triggers
 
 
+
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         e.preventDefault()
@@ -63,6 +64,10 @@ customTip.addEventListener("keyup", () => {
     console.log("click on tip")
     customTipInput()
 })
+
+numberOfPeople.addEventListener('click', () => {
+    numberOfPeople.value = ""
+    })
 
 
 numberOfPeople.addEventListener('keyup', () => {
