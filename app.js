@@ -58,6 +58,7 @@ buttons.forEach((button) => {
         } if (numberOfPeopleValue) {
             numberOfPeople.parentElement.classList.remove("error-message")
         }
+        if (billTotalValue && numberOfPeople) {
         let tipValue = e.target.innerText
         tipValue = tipValue.substr(0, tipValue.length -1)
         tipValueFormat = parseFloat(tipValue)
@@ -67,6 +68,7 @@ buttons.forEach((button) => {
         billTotal.innerHTML = "$" + parseFloat(BillPlusTotalTipPP).toFixed(2)
         TotalTipPP = SelectedTipValueForBill / numberOfPeopleValue
         tipAmount.innerHTML = "$" + parseFloat(TotalTipPP).toFixed(2)
+        }
     })
 })
 
