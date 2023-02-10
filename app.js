@@ -48,6 +48,16 @@ buttons.forEach((button) => {
         const billTotalValue = billInputTag.value
         const formatBillTotalValue = parseFloat(billTotalValue).toLocaleString('en-US')
         const numberOfPeopleValue = numberOfPeople.value
+        if (!billTotalValue) {
+            billInputTag.parentElement.classList.add("error-message")
+        } if (billTotalValue) {
+            billInputTag.parentElement.classList.remove("error-message")
+        }
+        if (!numberOfPeopleValue) {
+            numberOfPeople.parentElement.classList.add("error-message")
+        } if (numberOfPeopleValue) {
+            numberOfPeople.parentElement.classList.remove("error-message")
+        }
         let tipValue = e.target.innerText
         tipValue = tipValue.substr(0, tipValue.length -1)
         tipValueFormat = parseFloat(tipValue)
