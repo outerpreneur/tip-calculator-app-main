@@ -57,6 +57,9 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.3em;
+    box-shadow: 7px 18px 76px -20px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 7px 18px 76px -20px rgba(0,0,0,0.24);
+    -moz-box-shadow: 7px 18px 76px -20px rgba(0,0,0,0.24);
 }
 
 .input {
@@ -108,10 +111,16 @@ input {
 }
 
 
+/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 input::placeholder {
